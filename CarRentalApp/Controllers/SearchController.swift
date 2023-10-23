@@ -1,5 +1,5 @@
 //
-//  LoginController.swift
+//  SearchController.swift
 //  CarRentalApp
 //
 //  Created by Uzeyir on 21.10.23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class SearchController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

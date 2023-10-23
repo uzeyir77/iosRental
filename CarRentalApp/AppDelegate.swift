@@ -11,12 +11,45 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        if userIsLoggedIN() {
+                   // Kullanıcı oturum açtıysa TabBarController'ı göster
+                   showTabBarController()
+               } else {
+                   // Kullanıcı oturum açmadıysa LoginController'ı göster
+                   showLoginController()
+               }
+               
         // Override point for customization after application launch.
         return true
     }
+    
+    
+    
+    
+    
+    func userIsLoggedIN()-> Bool{
+
+
+        return UserDefaults.standard.bool(forKey: "userLOggedIn")
+    }
+
+
+    func showLoginController(){
+     let stortyboar = UIStoryboard(name: "Main", bundle: nil)
+        let loginController = stortyboar.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        window?.rootViewController = loginController
+    }
+    func showTabBarController(){
+     let stortyboar = UIStoryboard(name: "Main", bundle: nil)
+        let tabbarController = stortyboar.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        window?.rootViewController = tabbarController
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 
