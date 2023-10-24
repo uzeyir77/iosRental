@@ -19,33 +19,34 @@ class VehiclesController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carsimage.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "segmentCell", for: indexPath) as! SegmentCell
         if indexPath.row < carsimage.count {
             cell.segmenImage.image = UIImage(named: carsimage[indexPath.row])
-        } else{
-            print("Xeta \(indexPath.row)")}
-            
-            return cell
+        } else {
+            print("Xeta \(indexPath.row)")
+        }
+        return cell
     }
 
     @IBOutlet weak var collection: UICollectionView!
-
+    
+    
+    @IBOutlet weak var subCollection: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         do {
             let realm = try Realm()
-            
             cars = realm.objects(Car.self)
-            
-        }  catch {
-            
-            print("Xeta: \(error)")
             carsimage = cars.map { $0.carImage }
             print("Number of cars: \(cars.count)")
+        } catch {
+            print("Hata: \(error)")
         }
+        
         collection.reloadData()
-       
     }
 }

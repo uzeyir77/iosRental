@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A679FC442AE71F83002990E2 /* subSegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679FC432AE71F83002990E2 /* subSegmentCell.swift */; };
 		A696B3FB2AE3C08F00DB9007 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A696B3FA2AE3C08F00DB9007 /* LoginController.swift */; };
 		A696B3FE2AE3CAED00DB9007 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A696B3FD2AE3CAED00DB9007 /* Realm */; };
 		A696B4002AE3CAED00DB9007 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A696B3FF2AE3CAED00DB9007 /* RealmSwift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A679FC432AE71F83002990E2 /* subSegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subSegmentCell.swift; sourceTree = "<group>"; };
 		A696B3FA2AE3C08F00DB9007 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A696B4012AE3CF3A00DB9007 /* VehiclesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesController.swift; sourceTree = "<group>"; };
 		A696B4032AE3CF5E00DB9007 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A6ED7ECB2AE5ADD1006CBD3A /* Controllers */,
 				A696B4092AE521CE00DB9007 /* SegmentCell.swift */,
 				A6ED7EC92AE5801F006CBD3A /* DataManager.swift */,
+				A679FC432AE71F83002990E2 /* subSegmentCell.swift */,
 			);
 			path = CarRentalApp;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				A696B4042AE3CF5E00DB9007 /* SearchController.swift in Sources */,
 				FE9D309E2AE3A6040004F029 /* SceneDelegate.swift in Sources */,
 				A696B40A2AE521CE00DB9007 /* SegmentCell.swift in Sources */,
+				A679FC442AE71F83002990E2 /* subSegmentCell.swift in Sources */,
 				A696B4022AE3CF3A00DB9007 /* VehiclesController.swift in Sources */,
 				A696B3FB2AE3C08F00DB9007 /* LoginController.swift in Sources */,
 			);
